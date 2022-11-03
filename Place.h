@@ -21,6 +21,7 @@ class Place
         Place*searchPlace(string, Place*);
         Place*addPlace(string);
         class Edge* sublistEdge; // sublista de arcos
+        Place* nextPlace;
 
 
     private:

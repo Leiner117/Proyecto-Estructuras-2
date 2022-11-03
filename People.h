@@ -21,6 +21,8 @@ class People
         void setCurrentLocation(Place*);
         Place*getPlaceDestination();
         void setPlaceDestination(Place*);
+        People*addPeople(string,int,Place*,Place*);
+        People*next;
 
 private:
         string name;
@@ -28,6 +30,7 @@ private:
         Place*currentLocation;
         People*friendsList;
         Place*placeDestination;
+
 
 
 

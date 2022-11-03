@@ -20,17 +20,19 @@ string Place::getNamePlace() {
 Place *Place::searchPlace(string origin, Place* graph) {
     Place* tempP = graph;
     while(tempP != NULL){
-        if(tempP->nombre == origen)
+        if(tempP->namePlace == origin)
             return tempP;
-
-        tempP= tempP->
+        tempP = tempP->nextPlace;
 
     }
-
-
     return NULL;
 }
-Place*Place::addPlace()
+Place*Place::addPlace(string namePlace){
+    Place* newPlace= new Place(namePlace);
+    newPlace->sigV
+
+
+}
 
 
 

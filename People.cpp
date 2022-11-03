@@ -9,6 +9,7 @@ People::People(string name, int id,Place*current,Place*destination) {
     this->id = id;
     this->currentLocation = current;
     this->placeDestination = destination;
+    this->next = NULL;
 }
 string People::getName(){
     return this->name;
@@ -35,6 +36,10 @@ Place*People::getPlaceDestination() {
 }
 void People::setPlaceDestination(Place*destination){
     this->placeDestination = destination;
+}
+People*People::addPeople(string name,int id,Place*current,Place*des){
+    People newPeople = People(name,id,current,des);
+    newPeople =
 }
 
 
