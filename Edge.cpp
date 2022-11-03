@@ -3,10 +3,10 @@
 //
 
 #include "Edge.h"
-
+//#include "Place.h"
 #include <iostream>
 using namespace std;
-#include "Vertex.h"
+
 
 Edge::Edge(int dis, string des) {
     this->distance = dis;
@@ -14,32 +14,35 @@ Edge::Edge(int dis, string des) {
     this->nextEdge = nullptr;
 }
 
-void Edge::addEdge(string origin,int dis,string des){
-    Vertex* vOrigin = searchVertex(origin);
-    Vertex* vDestination = searchVertex(des);
+Place* Edge::addEdge(string origin,int dis,string des){
 
-    if(vOrigin == nullptr){
+    Place* vOrigin = vOrigin->searchPlace(origin);
+    Place* vDestination = vOrigin->searchPlace(des);
+
+    if(vOrigin == NULL){
         cout<<"NO SE HA ENCONTRO EL ORIGEN";
-        return;
+        return NULL;
     }
-    if(vDestination == nullptr ) {
+    if(vDestination == NULL ) {
         cout<<"NO SE HA ENCONTRO EL DESTINO";
-        return;
+        return NULL;
     }
 
     Edge* newEdge = new Edge(dis,des);
 
     newEdge->nextEdge = vOrigin->sublistEdge;
     vOrigin->sublistEdge = newEdge;
+
+    return vOrigin;
+
 }
 
-Edge* Edge::dataload(Edge* graph) {
-
+//graph es una lista de lugares(vertices)
+Place* Edge::dataload(Place* graph) {
     graph = addEdge("CQ",12,"Florencia");
     graph = addEdge("Florencia",12,"CQ");
-
     graph = addEdge("Florencia",6,"SantaClara");
     graph = addEdge("SantaClara",6,"Florencia");
 
-    return edgeList;
+    return graph;
 }

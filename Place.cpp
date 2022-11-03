@@ -9,7 +9,6 @@ using namespace std;
 //Constructor
 Place::Place(string namePlace) {
     this->namePlace=namePlace;
-    this->peopleList=NULL;
 }
 void Place::setNamePlace(string namePlace) {
     this->namePlace=namePlace;
@@ -18,12 +17,20 @@ string Place::getNamePlace() {
     return this->namePlace;
 }
 
-People*Place::setPeopleList(People *peopList) {
-    this->peopleList=peopList;
+Place *Place::searchPlace(string origin, Place* graph) {
+    Place* tempP = graph;
+    while(tempP != NULL){
+        if(tempP->nombre == origen)
+            return tempP;
+
+        tempP= tempP->
+
+    }
+
+
+    return NULL;
 }
-People*Place::getPeopleList(People*) {
-    return  this->peopleList;
-}
+Place*Place::addPlace()
 
 
 

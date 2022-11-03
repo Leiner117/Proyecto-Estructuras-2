@@ -5,6 +5,8 @@
 #ifndef PROYECTO_ESTRUCTURAS_2_EDGE_H
 #define PROYECTO_ESTRUCTURAS_2_EDGE_H
 #include <iostream>
+#include "Place.h"
+
 using namespace std;
 
 class Edge {
@@ -13,8 +15,8 @@ public:
     string destination;
     Edge* nextEdge;
     Edge(int, string);
-
-    Edge* dataload(Edge*);
+    Place* addEdge(string,int,string);
+    Place* dataload(Place*);
 
 };
 
