@@ -7,21 +7,22 @@
 using namespace std;
 
 //Constructor
-Place::Place(string namePlace){
+Place::Place(string namePlace) {
     this->namePlace=namePlace;
     this->peopleList=NULL;
 }
-
-void Place::setNamePlace(string namePlace){
+void Place::setNamePlace(string namePlace) {
     this->namePlace=namePlace;
 }
-
-string Place::getNamePlace(){
-    return namePlace;
+string Place::getNamePlace() {
+    return this->namePlace;
 }
 
+People*Place::setPeopleList(People *peopList) {
+    this->peopleList=peopList;
+}
 People*Place::getPeopleList(People*) {
-
+    return  this->peopleList;
 }
 
 

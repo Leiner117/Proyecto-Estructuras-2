@@ -12,7 +12,7 @@ class Place
 {
     public:
         Place(string);
-        void setNamePlace(string);
+        void setNamePlace(string namePlace);
         string getNamePlace();
         void setPeopleList(People*);
         People* getPeopleList();
