@@ -21,7 +21,12 @@ class People
         void setCurrentLocation(Place*);
         Place*getPlaceDestination();
         void setPlaceDestination(Place*);
-        People*addPeople(string,int,Place*,Place*);
+        People*addPeople(string,int,Place*,Place*,People*);
+        People*searchPeople(int,People*);
+        People*modPeople(int,string,int,Place*,Place*,People*);
+        People*deletePeople(int oldId,People*);
+        void printPeopleList(People*);
+        People*dataLoad(People*,place*);
         People*next;
 
 private:

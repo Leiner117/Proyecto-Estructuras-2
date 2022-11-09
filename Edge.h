@@ -17,6 +17,8 @@ public:
     Edge(int, string);
     Place* addEdge(string,int,string);
     Place* dataload(Place*);
+    bool searchEdge(Place*, string);
+    bool printEdge(Place* ,string , string );
 
 };
 

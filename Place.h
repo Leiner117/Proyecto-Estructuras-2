@@ -17,18 +17,13 @@ class Place
         Place(string);
         void setNamePlace(string namePlace);
         string getNamePlace();
-        Place* dataLoad(Place* );
+        Place* dataLoad(Place*);
         Place*searchPlace(string, Place*);
-        Place*addPlace(string);
+        Place*addPlace(string,Place*);
         class Edge* sublistEdge; // sublista de arcos
         Place* nextPlace;
-
-
-    private:
+    bool visited;
+private:
         string namePlace;
-        bool visited;
-
-
-
 };
 #endif //PROYECTO_ESTRUCTURAS_2_PLACE_H
